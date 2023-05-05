@@ -43,9 +43,11 @@
 
                 tiempoRestante--;
 
-                if (tiempoRestante < 0) {
+                if (tiempoRestante < -1) {
+                    if (tiempoRestante == -2){
                     alert("¡Despierta!");
                     clearInterval();
+                }
                 }
                 else {
                     document.getElementById("contador").textContent = `${horas}:${minutos
