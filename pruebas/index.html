@@ -1,4 +1,99 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Despertador con cuenta atrás</title>
+</head>
+
+<body>
+    <form>
+        <label>
+            Hora:
+            <input type="number" id="hora" min="0" max="23">
+        </label>
+        <br>
+        <label>
+            Minutos:
+            <input type="number" id="minutos" min="0" max="59">
+        </label>
+        <br>
+        <label>
+            Segundos:
+            <input type="number" id="segundos" min="0" max="59">
+        </label>
+        <br>
+        <button type="button" onclick="iniciarCuentaAtras()">Iniciar cuenta atrás</button>
+    </form>
+    <br>
+    <div id="contador"></div>
+    <script>
+        function iniciarCuentaAtras() {
+            const hora = document.getElementById("hora").value;
+            const minutos = document.getElementById("minutos").value;
+            const segundos = document.getElementById("segundos").value;
+
+            const tiempoTotal = hora * 3600 + minutos * 60 + segundos;
+
+            let tiempoRestante = tiempoTotal;
+
+            setInterval(() => {
+                const horas = Math.floor(tiempoRestante / 3600);
+                const minutos = Math.floor((tiempoRestante % 3600) / 60);
+                const segundos = tiempoRestante % 60;
+
+                tiempoRestante--;
+
+                if (tiempoRestante < 0) {
+                    alert("¡Despierta!");
+                    clearInterval();
+                }
+                else {
+                    document.getElementById("contador").textContent = `${horas}:${minutos
+                    .toString()
+                    .padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>Despertador con cuenta atrás</title>
+</head>
+<body>
+	<h1>Despertador con cuenta atrás</h1>
+	<p>Introduce la cantidad de segundos para la cuenta atrás:</p>
+	<input type="number" id="countdown-input">
+	<button onclick="startCountdown()">Iniciar cuenta atrás</button>
+	<p id="countdown-display"></p>
+
+	<script>
+		let countdown;
+		function startCountdown() {
+			const input = document.getElementById('countdown-input');
+			const display = document.getElementById('countdown-display');
+			let seconds = parseInt(input.value);
+			countdown = setInterval(() => {
+				if (seconds <= 0) {
+					clearInterval(countdown);
+					display.innerHTML = "¡Despierta!";
+					return;
+				}
+				display.innerHTML = seconds + " segundos restantes";
+				seconds--;
+			}, 1000);
+		}
+	</script>
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,6 +116,26 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+
+        //En 1 segundo se crea un nuevo elemento
+        setTimeout(function(){
+        nuevo_elemento = document.createElement("div");
+        container.appendChild(nuevo_elemento);
+        },1000);
+        
+    </script>
+    <style type="text/css">
+    div {
+        width:50px;
+        height:50px;
+        background:#39F;
+        margin:10px;
+        float:left;
+    }
+    </style>
+    <span id="container">
+    </span>
     <form><br>
         Enter your First Name: <input type="text" id="firstname" /><br><br>
         Enter your Last Name: <input type="text" id="lastname" /><br><br>
@@ -30,4 +145,4 @@
 
 </body>
 
-</html>
+</html>-->
