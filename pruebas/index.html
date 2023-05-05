@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function formdata() {
+            let hora1 = document.getElementById("firstname").value;
+            let minutos1 = document.getElementById("lastname").value;
+            let segundos1 = document.getElementById("lastname").value;
+            document.writeln("<h1>Confirmation Page</h1><br>");
+            document.writeln("Thank you for completing this form.<br><br>");
+            document.writeln("The first name you entered is " + firstname1 + "<br>");
+            document.writeln("The last name you entered is " + lastname1);
+        }
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form><br>
+        Enter your First Name: <input type="text" id="firstname" /><br><br>
+        Enter your Last Name: <input type="text" id="lastname" /><br><br>
+        <input type="submit" value="Submit" onclick="formdata()" /><br>
+    </form>
+
+
+</body>
+
+</html>
