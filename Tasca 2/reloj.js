@@ -9,10 +9,16 @@ function actualizaReloj(I) {
     if (minuto < 10) minuto = "0" + minuto
     if (segundo < 10) segundo = "0" + segundo
 
-    horaImprimible = hora + " : " + minuto + " : " + segundo
+    if (segundo%2 == 0)
+        puntos = ":"
+    else
+        puntos = " "
 
-    document.title = horaImprimible
-    horaActual.innerHTML = horaImprimible
+    horaActual.innerHTML = hora
+    puntos1Actual.innerHTML = puntos
+    puntos2Actual.innerHTML = puntos
+    minutoActual.innerHTML = minuto
+    segundoActual.innerHTML = segundo
 
     setTimeout("actualizaReloj()", 1000)
 }
