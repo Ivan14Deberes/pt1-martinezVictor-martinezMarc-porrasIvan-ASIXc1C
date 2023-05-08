@@ -13,24 +13,78 @@
         <h1>ALARMA</h1>
     </div>
     <div>
-    <table>
-        <td>
-            <h1 id="horaActual">hh</h1>
-        </td>
-        <td>
-            <h1 id="puntos1Actual">:</h1>
-        </td>
-        <td>
-            <h1 id="minutoActual">mm</h1>
-        </td>
-        <td>
-            <h1 id="puntos2Actual">:</h1>
-        </td>
-        <td>
-            <h1 id="segundoActual">ss</h1>
-        </td>
-    </table>
-</div>
+        <table>
+            <td>
+                <h1 id="horaActual">hh</h1>
+            </td>
+            <td>
+                <h1 id="puntos1Actual">:</h1>
+            </td>
+            <td>
+                <h1 id="minutoActual">mm</h1>
+            </td>
+            <td>
+                <h1 id="puntos2Actual">:</h1>
+            </td>
+            <td>
+                <h1 id="segundoActual">ss</h1>
+            </td>
+        </table>
+        <br />
+
+    </div>
+    <div>
+        <form>
+            <label>
+                Hora:
+                <input type="number" id="hora" min="0" max="23">
+            </label>
+            <br>
+            <label>
+                Minutos:
+                <input type="number" id="minutos" min="0" max="59">
+            </label>
+            <br>
+            <label>
+                Segundos:
+                <input type="number" id="segundos" min="0" max="59">
+            </label>
+            <br>
+            <button id="botonForm" type="button" onclick="iniciarCuentaAtras()">Iniciar cuenta atrás</button>
+        </form>
+    </div>
+    <div>
+        <table>
+            <td>
+                <h1 id="horaRestantes">00</h1>
+            </td>
+            <td>
+                <h1 id="puntos1Restantes">:</h1>
+            </td>
+            <td>
+                <h1 id="minutoRestantes">00</h1>
+            </td>
+            <td>
+                <h1 id="puntos2Restantes">:</h1>
+            </td>
+            <td>
+                <h1 id="segundoRestantes">00</h1>
+            </td>
+        </table>
+    </div>
+    <div>
+        <table>
+            <td>
+                <h1 id="horasAcabara">00</h1>
+            </td>
+            <td>
+                <h1 id="puntos1Acabara">:</h1>
+            </td>
+            <td>
+                <h1 id="minutosAcabara">00</h1>
+            </td>
+        </table>
+    </div>
 </body>
 
 </html>

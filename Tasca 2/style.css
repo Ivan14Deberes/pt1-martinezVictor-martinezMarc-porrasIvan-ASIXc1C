@@ -1,4 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/alarm-clock');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 body{
     text-align: center;
     background-color: black;
@@ -17,4 +19,12 @@ table {
 }
 table td{
     width: 50px;
+}
+form {
+    font-family: 'Kanit', sans-serif;
+    color: #00FF00;
+}
+
+.deshabilitado {
+    display: none;
 }
