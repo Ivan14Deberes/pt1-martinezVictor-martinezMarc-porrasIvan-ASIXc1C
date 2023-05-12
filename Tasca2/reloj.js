@@ -114,6 +114,79 @@ function iniciarCuentaAtras() {
     }, 1000);
 }
 
+function iniciarReloj() {
+    let hora = document.getElementById("hora").value;
+    let minuto = document.getElementById("minutos").value;
+
+    const momentoActual = new Date()
+    let horaActual = momentoActual.getHours()
+    let minutoActual = momentoActual.getMinutes()
+
+    let horaFinalizar = horaActual - hora
+    let minutoFinalizar = minutoActual - minuto
+
+    let tiempoTotal = (horaFinalizar * 3600) + (minutoFinalizar * 60);
+    let horasAcabar = Math.floor(tiempoTotal / 3600);
+    let minutosAcabar = Math.floor((tiempoTotal % 3600) / 60);
+    
+    if (horasAcabar < 10) horasAcabar = "0" + horasAcabar
+    if (minutosAcabar < 10) minutosAcabar = "0" + minutosAcabar
+    console.log(horasAcabar, minutosAcabar);
+
+    setInterval(() => {
+        let horas = Math.floor(tiempoTotal / 3600);
+        let minutos = Math.floor((tiempoTotal % 3600) / 60);
+        let segundos = tiempoTotal % 60;
+        console.log(tiempoTotal);
+
+        tiempoTotal--;
+
+        if (tiempoTotal < -1) {
+            if (tiempoTotal == -2) {
+                clearInterval();
+                console.log(song)
+                if (song == "morningF") {
+                    const audio = new Audio("../Tasca2/audios/Samsung GALAXY S4 Alarms - Morning Flower.m4a");
+                    audio.play();
+                }
+                else if (song == "morningFB") {
+                    const audio = new Audio("../Tasca2/audios/morning flowers saturadisimo.m4a");
+                    audio.play();
+                }
+                else if (song == "apple") {
+                    const audio = new Audio("../Tasca2/audios/iPhone Alarm - Sound Effects.m4a");
+                    audio.play();
+                }
+                else if (song == "appleB") {
+                    const audio = new Audio("../Tasca2/audios/Iphone alarm sound effect EARRAPE.m4a");
+                    audio.play();
+                }
+                element.classList.remove("deshabilitado");
+            }
+        }
+        else {
+            if (segundo % 2 == 0) {
+                puntos = ":"
+            }
+            else {
+                puntos = " "
+            }
+            if (horas < 10) horas = "0" + horas
+            if (minutos < 10) minutos = "0" + minutos
+            if (segundos < 10) segundos = "0" + segundos
+            horaRestantes.innerHTML = horas
+            puntos1Restantes.innerHTML = puntos
+            puntos2Restantes.innerHTML = puntos
+            minutoRestantes.innerHTML = minutos
+            segundoRestantes.innerHTML = segundos
+
+            horasAcabara.innerHTML = horasAcabar
+            minutosAcabara.innerHTML = minutosAcabar
+            puntos1Acabara.innerHTML = puntos
+        }
+    }, 1000);
+}
+
 function noche() {
     let element = document.getElementById("main");
     element.classList.remove("dia");
