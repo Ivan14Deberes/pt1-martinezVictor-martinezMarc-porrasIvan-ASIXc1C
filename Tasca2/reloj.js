@@ -116,19 +116,22 @@ function iniciarCuentaAtras() {
 function iniciarReloj() {
     let hora = document.getElementById("horaExacta").value;
     let minuto = document.getElementById("minutosExactos").value;
+    let segundos = document.getElementById("segundosExactos").value;
     let song = document.getElementById("AudioSelector2").value;
 
     const momentoActual = new Date()
     let horaActual = momentoActual.getHours()
     let minutoActual = momentoActual.getMinutes()
+    let segundoActual = momentoActual.getSeconds()
 
     let horaFinalizar = hora - horaActual
     let minutoFinalizar = minuto - minutoActual
+    let segundoFinalizar = segundos - segundoActual
 
-    let tiempoTotal = (horaFinalizar * 3600) + (minutoFinalizar * 60);
+    let tiempoTotal = (horaFinalizar * 3600) + (minutoFinalizar * 60) + parseInt(segundoFinalizar) - 1;
     let horasAcabar = Math.floor(tiempoTotal / 3600);
     let minutosAcabar = Math.floor((tiempoTotal % 3600) / 60);
-    
+
     if (horasAcabar < 10) horasAcabar = "0" + horasAcabar
     if (minutosAcabar < 10) minutosAcabar = "0" + minutosAcabar
     console.log(horasAcabar, minutosAcabar);
