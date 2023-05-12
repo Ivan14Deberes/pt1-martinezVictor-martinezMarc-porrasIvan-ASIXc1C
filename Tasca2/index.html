@@ -9,6 +9,7 @@
 </head>
 
 <body id="main" onload="actualizaReloj()">
+    <a href="../index.html">Return to Main</a>
     <div>
         <button onclick="dia()">🔆</button>
         <button onclick="noche()">🌙</button>
@@ -68,6 +69,13 @@
             </label>
             <br>
             <button id="botonForm" type="button" onclick="iniciarCuentaAtras()">Iniciar cuenta atrás</button>
+            <br>
+            <select name="selectAudio" id="AudioSelector">
+                <option value="morningF">Morning Flower</option>
+                <option value="morningFB">Morning Flower para sordos</option>
+                <option value="apple">Alarma Apple</option>
+                <option value="appleB">Alarma Apple para sordos</option>
+              </select>
         </form>
     </div>
     <div>

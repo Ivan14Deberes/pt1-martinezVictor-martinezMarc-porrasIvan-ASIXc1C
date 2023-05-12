@@ -31,9 +31,19 @@ function iniciarCuentaAtras() {
     element.classList.add("deshabilitado");
 
 
-    const hora = document.getElementById("hora").value;
-    const minutos = document.getElementById("minutos").value;
-    const segundos = document.getElementById("segundos").value;
+    let hora = document.getElementById("hora").value;
+    let minutos = document.getElementById("minutos").value;
+    let segundos = document.getElementById("segundos").value;
+    let song = document.getElementById("AudioSelector").value;
+    if (isNaN(hora)) {
+        hora = 00
+    }
+    if (isNaN(minutos)) {
+        minutos = 00
+    }
+    if (isNaN(parseInt(segundos))) {
+        segundos = 00
+    }
 
     const tiempoTotal = (hora * 3600) + (minutos * 60) + parseInt(segundos);
 
@@ -60,8 +70,24 @@ function iniciarCuentaAtras() {
 
         if (tiempoRestante < -1) {
             if (tiempoRestante == -2) {
-                alert("¡Despierta!");
                 clearInterval();
+                console.log(song)
+                if (song == "morningF") {
+                    const audio = new Audio("../Tasca2/audios/Samsung GALAXY S4 Alarms - Morning Flower.m4a");
+                    audio.play();
+                }
+                else if (song == "morningFB") {
+                    const audio = new Audio("../Tasca2/audios/morning flowers saturadisimo.m4a");
+                    audio.play();
+                }
+                else if (song == "apple") {
+                    const audio = new Audio("../Tasca2/audios/iPhone Alarm - Sound Effects.m4a");
+                    audio.play();
+                }
+                else if (song == "appleB") {
+                    const audio = new Audio("../Tasca2/audios/Iphone alarm sound effect EARRAPE.m4a");
+                    audio.play();
+                }
                 element.classList.remove("deshabilitado");
             }
         }
