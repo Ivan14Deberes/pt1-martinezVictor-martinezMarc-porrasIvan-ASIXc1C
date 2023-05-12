@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Ruleta nombres</title>
 </head>
-<body>
-    <input type="button" value="SPIN THE WEEL" style="float:left;" id="spin">
-    
-    
-    <canvas id="canvas" width="500" height="500"></canvas>
+
+<body id="main">
+    <div>
+        <button onclick="dia()">🔆</button>
+        <button onclick="noche()">🌙</button>
+
+    </div>
+    <div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+    <div>
+        <input type="button" value="SPIN THE WEEL" style="float:left;" id="spin">
+    </div>
     <script src="../Tasca1/ruleta.js"></script>
 
-</body></html>
+</body>
+
+</html>

@@ -8,30 +8,47 @@
     <script src="reloj.js"></script>
 </head>
 
-<body onload="actualizaReloj()">
+<body id="main" onload="actualizaReloj()">
+    <div>
+        <button onclick="dia()">🔆</button>
+        <button onclick="noche()">🌙</button>
+            
+    </div>
     <div>
         <h1>ALARMA</h1>
     </div>
     <div>
         <table>
             <td>
-                <h1 id="horaActual">hh</h1>
+                <h1 id="horaRestantes">00</h1>
             </td>
             <td>
-                <h1 id="puntos1Actual">:</h1>
+                <h1 id="puntos1Restantes">:</h1>
             </td>
             <td>
-                <h1 id="minutoActual">mm</h1>
+                <h1 id="minutoRestantes">00</h1>
             </td>
             <td>
-                <h1 id="puntos2Actual">:</h1>
+                <h1 id="puntos2Restantes">:</h1>
             </td>
             <td>
-                <h1 id="segundoActual">ss</h1>
+                <h1 id="segundoRestantes">00</h1>
             </td>
         </table>
-        <br />
-
+        <div width="500" height="500">
+            <h1 style="color: #00FF00;">//</h1>
+        </div>
+        <table>
+            <td>
+                <h1 id="horasAcabara">00</h1>
+            </td>
+            <td>
+                <h1 id="puntos1Acabara">:</h1>
+            </td>
+            <td>
+                <h1 id="minutosAcabara">00</h1>
+            </td>
+        </table>
     </div>
     <div>
         <form>
@@ -56,34 +73,23 @@
     <div>
         <table>
             <td>
-                <h1 id="horaRestantes">00</h1>
+                <h1 id="horaActual">hh</h1>
             </td>
             <td>
-                <h1 id="puntos1Restantes">:</h1>
+                <h1 id="puntos1Actual">:</h1>
             </td>
             <td>
-                <h1 id="minutoRestantes">00</h1>
+                <h1 id="minutoActual">mm</h1>
             </td>
             <td>
-                <h1 id="puntos2Restantes">:</h1>
+                <h1 id="puntos2Actual">:</h1>
             </td>
             <td>
-                <h1 id="segundoRestantes">00</h1>
+                <h1 id="segundoActual">ss</h1>
             </td>
         </table>
-    </div>
-    <div>
-        <table>
-            <td>
-                <h1 id="horasAcabara">00</h1>
-            </td>
-            <td>
-                <h1 id="puntos1Acabara">:</h1>
-            </td>
-            <td>
-                <h1 id="minutosAcabara">00</h1>
-            </td>
-        </table>
+        <br />
+
     </div>
 </body>
 

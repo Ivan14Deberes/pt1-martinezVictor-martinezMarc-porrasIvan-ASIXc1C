@@ -87,3 +87,12 @@ function iniciarCuentaAtras() {
         }
     }, 1000);
 }
+
+function noche() {
+    let element = document.getElementById("main");
+    element.classList.remove("dia");
+}
+function dia() {
+    let element = document.getElementById("main");
+    element.classList.add("dia");
+}

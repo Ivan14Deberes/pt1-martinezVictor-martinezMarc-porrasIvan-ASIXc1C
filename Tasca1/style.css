@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+div {
+    display: flex;
+    justify-content: center;;
+}
+canvas {
+    background-color: white;
+}
+.dia  {
+    background-color: white;
+}
