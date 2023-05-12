@@ -1,0 +1,15 @@
+div#main {
+    display: flex;
+    justify-content: center;
+}
+div.dentro {
+    margin: 10px;
+    padding: 50px;
+    background-color: palevioletred;
+    border-radius: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

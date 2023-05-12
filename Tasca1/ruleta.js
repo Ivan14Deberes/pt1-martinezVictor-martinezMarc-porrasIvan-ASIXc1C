@@ -10,6 +10,7 @@ var spinTimeTotal = 0;
 
 var ctx;
 
+const audio = new Audio("../Tasca1/audios/Spinning Wheel Sound Effect.m4a");
 document.getElementById("spin").addEventListener("click", spin);
 
 
@@ -36,7 +37,6 @@ function getColor(item, maxitem) {
 }
 
 function drawRouvarteWheel() {
-  audio.play();
   var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     var outsideRadius = 200;
@@ -92,6 +92,7 @@ function drawRouvarteWheel() {
 }
 
 function spin() {
+  audio.play();
   spinAngleStart = Math.random() * 10 + 10;
   spinTime = 0;
   spinTimeTotal = Math.random() * 3 + 4 * 1000;
@@ -128,7 +129,6 @@ function easeOut(t, b, c, d) {
   return b+c*(tc + -3*ts + 3*t);
 }
 
-const audio = new Audio("../Tasca1/audios/Spinning Wheel Sound Effect.m4a");
 drawRouvarteWheel();
 
 function noche() {

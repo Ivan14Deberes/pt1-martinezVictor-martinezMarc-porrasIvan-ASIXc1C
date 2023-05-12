@@ -1,5 +1,4 @@
-actualizaReloj()
-function actualizaReloj(I) {
+function actualizaReloj() {
     momentoActual = new Date()
     hora = momentoActual.getHours()
     minuto = momentoActual.getMinutes()
@@ -115,15 +114,16 @@ function iniciarCuentaAtras() {
 }
 
 function iniciarReloj() {
-    let hora = document.getElementById("hora").value;
-    let minuto = document.getElementById("minutos").value;
+    let hora = document.getElementById("horaExacta").value;
+    let minuto = document.getElementById("minutosExactos").value;
+    let song = document.getElementById("AudioSelector2").value;
 
     const momentoActual = new Date()
     let horaActual = momentoActual.getHours()
     let minutoActual = momentoActual.getMinutes()
 
-    let horaFinalizar = horaActual - hora
-    let minutoFinalizar = minutoActual - minuto
+    let horaFinalizar = hora - horaActual
+    let minutoFinalizar = minuto - minutoActual
 
     let tiempoTotal = (horaFinalizar * 3600) + (minutoFinalizar * 60);
     let horasAcabar = Math.floor(tiempoTotal / 3600);
@@ -180,8 +180,11 @@ function iniciarReloj() {
             minutoRestantes.innerHTML = minutos
             segundoRestantes.innerHTML = segundos
 
-            horasAcabara.innerHTML = horasAcabar
-            minutosAcabara.innerHTML = minutosAcabar
+            let hora = document.getElementById("horaExacta").value;
+            let minuto = document.getElementById("minutosExactos").value;
+
+            horasAcabara.innerHTML = hora
+            minutosAcabara.innerHTML = minuto
             puntos1Acabara.innerHTML = puntos
         }
     }, 1000);
