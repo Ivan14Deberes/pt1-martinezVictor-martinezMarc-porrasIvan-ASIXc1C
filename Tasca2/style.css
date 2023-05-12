@@ -20,7 +20,7 @@ table {
 table td{
     width: 50px;
 }
-form {
+form, legend {
     font-family: 'Kanit', sans-serif;
     color: #00FF00;
 }

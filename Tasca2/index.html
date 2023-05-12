@@ -13,7 +13,7 @@
     <div>
         <button onclick="dia()">🔆</button>
         <button onclick="noche()">🌙</button>
-            
+
     </div>
     <div>
         <h1>ALARMA</h1>
@@ -52,31 +52,58 @@
         </table>
     </div>
     <div>
-        <form>
-            <label>
-                Hora:
-                <input type="number" id="hora" min="0" max="23">
-            </label>
+        <fieldset>
+            <legend>Compte Enrere</legend>
             <br>
-            <label>
-                Minutos:
-                <input type="number" id="minutos" min="0" max="59">
-            </label>
-            <br>
-            <label>
-                Segundos:
-                <input type="number" id="segundos" min="0" max="59">
-            </label>
-            <br>
-            <button id="botonForm" type="button" onclick="iniciarCuentaAtras()">Iniciar cuenta atrás</button>
-            <br>
-            <select name="selectAudio" id="AudioSelector">
-                <option value="morningF">Morning Flower</option>
-                <option value="morningFB">Morning Flower para sordos</option>
-                <option value="apple">Alarma Apple</option>
-                <option value="appleB">Alarma Apple para sordos</option>
-              </select>
-        </form>
+            <form>
+                <label>
+                    Hora:
+                    <input type="number" id="hora" min="0" max="23">
+                </label>
+                <br>
+                <label>
+                    Minutos:
+                    <input type="number" id="minutos" min="0" max="59">
+                </label>
+                <br>
+                <label>
+                    Segundos:
+                    <input type="number" id="segundos" min="0" max="59">
+                </label>
+                <br>
+                <button id="botonForm" type="button" onclick="iniciarCuentaAtras()">Iniciar cuenta atrás</button>
+                <br>
+                <select name="selectAudio" id="AudioSelector">
+                    <option value="morningF">Morning Flower</option>
+                    <option value="morningFB">Morning Flower para sordos</option>
+                    <option value="apple">Alarma Apple</option>
+                    <option value="appleB">Alarma Apple para sordos</option>
+                </select>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Hora Exacta</legend>
+            <form>
+                <label>
+                    Hora:
+                    <input type="number" id="hora" min="0" max="23">
+                </label>
+                <br>
+                <label>
+                    Minutos:
+                    <input type="number" id="minutos" min="0" max="59">
+                </label>
+                <br>
+                <button id="botonForm" type="button" onclick="iniciarCuentaAtras()">Iniciar cuenta atrás</button>
+                <br>
+                <select name="selectAudio" id="AudioSelector">
+                    <option value="morningF">Morning Flower</option>
+                    <option value="morningFB">Morning Flower para sordos</option>
+                    <option value="apple">Alarma Apple</option>
+                    <option value="appleB">Alarma Apple para sordos</option>
+                </select>
+            </form>
+        </fieldset>
     </div>
     <div>
         <table>
